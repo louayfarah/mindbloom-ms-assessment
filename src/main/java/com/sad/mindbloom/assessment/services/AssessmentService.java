@@ -36,8 +36,8 @@ public final class AssessmentService {
             .map(appointment -> {
                 if (assessmentUpdate.getFeedback() != null)
                     appointment.setFeedback(assessmentUpdate.getFeedback());
-                if (assessmentUpdate.getFeedback() != null)
-                    appointment.setFeedback(assessmentUpdate.getFeedback());
+                if (assessmentUpdate.getReviewingCounselorId() != null)
+                    appointment.setReviewingCounselorId(assessmentUpdate.getReviewingCounselorId());
                 return assessmentRepository.save(appointment);
             });
         
